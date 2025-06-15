@@ -1,0 +1,53 @@
+.banner-container {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .banner-container h2{
+    font-size: 5rem;
+    font-weight: 200;
+  }
+  
+  .banner-items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .banner-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .banner-icon {
+    margin-bottom: 10px;
+  }
+
+  .banner-icon img{
+    width: 40px;
+  }
+  
+  .banner-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0073e6;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+
+    .banner-container {
+      padding: 10px;
+    }
+    
+    .banner-container h2{
+      font-size: 3rem;
+    }
+  
+    .banner-items {
+      flex-direction: column;
+    }
+    
+  }

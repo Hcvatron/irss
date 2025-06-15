@@ -1,0 +1,117 @@
+.dashboardbot {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+}
+
+.dashboardbot h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Table wrapper for responsiveness */
+.transaction-table-wrapper {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    width: 100%;
+    margin: auto;
+    border-radius: 8px;
+}
+
+/* Scrollbar Styling */
+.transaction-table-wrapper::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+
+.transaction-table-wrapper::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+}
+
+.transaction-table {
+    width: 100%;
+    min-width: 600px; /* Prevent table from shrinking too much */
+    border-collapse: collapse;
+}
+
+/* Table Header */
+.transaction-table thead {
+    background-color: #00599c;
+    color: white;
+    font-size: 1rem;
+    position: sticky;
+    top: 0; 
+    z-index: 1; 
+}
+
+.transaction-table th,
+.transaction-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    height: 50px;
+}
+
+/* Row Styling */
+.transaction-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.transaction-type {
+    font-weight: bold;
+}
+
+.transaction-type.withdraw {
+    color: red;
+}
+
+.transaction-type.credited {
+    color: green;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .dashboardbot {
+        padding: 15px;
+    }
+
+    .dashboardbot h2 {
+        font-size: 1.3rem;
+    }
+
+    .transaction-table-wrapper {
+        max-height: 220px;
+    }
+
+    .transaction-table th,
+    .transaction-table td {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .dashboardbot {
+        padding: 10px;
+    }
+
+    .dashboardbot h2 {
+        font-size: 1.2rem;
+    }
+
+    .transaction-table-wrapper {
+        max-height: 200px;
+    }
+
+    .transaction-table th,
+    .transaction-table td {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+}

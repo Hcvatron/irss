@@ -1,0 +1,98 @@
+.admin-dashboard {
+  padding: 2rem;
+}
+
+.admin-dashboard table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  font-size: 16px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-dashboard main {
+  margin-top: 2rem;
+}
+
+.admin-dashboard thead, .admin-dashboard tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.admin-dashboard tbody {
+  display: block;
+  max-height: 900px; /* Set the height to your preferred value */
+  overflow-y: scroll; /* Allow scrolling */
+}
+
+/* Hide scrollbar but keep functionality */
+.admin-dashboard tbody::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.admin-dashboard tbody {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.admin-dashboard tbody tr {
+  width: 100%;
+}
+
+.admin-dashboard th, td {
+  padding: 15px 20px;
+  background: #fff;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.admin-dashboard thead th {
+  background-color: #f5f5f5;
+  color: #333;
+  font-weight: bold;
+}
+
+.admin-dashboard tbody tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+.admin-dashboard tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.admin-dashboard button {
+  padding: 10px 15px;
+  background-color: #009879;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-dashboard button:hover {
+  background-color: #00796b;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+}

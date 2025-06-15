@@ -1,0 +1,197 @@
+.dashboard {
+  width: 100%;
+  height: auto !important;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* Top Section */
+.dashboard .dashboard-top {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.dashboard .dashboard-card {
+  flex: 1;
+  min-width: 280px;  /* Ensures proper sizing on smaller screens */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.dashboard .personal-info {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+.dashboard .bank-info {
+  background: linear-gradient(to right, #3673dc, #094fe6);
+}
+
+.dashboard .dashboard-top h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.dashboard .dashboard-top p {
+  font-size: 1.4rem;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  /* flex-wrap: wrap; */
+}
+
+.dashboard .dashboard-top p span:nth-child(1) {
+  width: 12rem;
+  font-weight: bold;
+}
+
+.dashboard .dashboard-top p span:nth-child(2) {
+  margin-left: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* Bottom Section (Transaction History) */
+.dashboard .dashboardbot {
+  width: 100%;
+  height: auto;
+}
+
+.transaction-table-wrapper {
+  max-height: 220px;
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+/* Transaction Table */
+.transaction-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transaction-table thead {
+  background-color: #00599c;
+  color: white;
+  font-size: 1.6rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.transaction-table th,
+.transaction-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  height: 45px;
+}
+
+.transaction-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.transaction-type {
+  font-weight: bold;
+}
+
+.transaction-type.withdraw {
+  color: red;
+}
+
+.transaction-type.credited {
+  color: green;
+}
+
+/* Scrollbar Styles */
+.transaction-table-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.transaction-table-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #555;
+}
+
+/* LOADING SPINNER */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* RESPONSIVENESS */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .dashboard .dashboard-top {
+      flex-direction: column;
+      align-items: center;
+      /* justify-content: center; */
+  }
+
+  .dashboard .dashboard-card {
+      width: 90%;
+  }
+
+  .dashboard .dashboard-top h2 {
+      font-size: 2.5rem;
+  }
+
+  .dashboard .dashboard-top p {
+      font-size: 1.2rem;
+  }
+
+  .transaction-table th,
+  .transaction-table td {
+      font-size: 1.2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .dashboard .dashboard-top {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem !important;
+    height: 100% !important;
+  }
+
+
+  .dashboard .dashboard-top h2 {
+      font-size: 2rem;
+  }
+
+  .dashboard .dashboard-top p {
+      font-size: 1rem !important;
+  }
+
+  .dashboard .dashboard-card {
+      width: 100%;
+      padding: 15px;
+  }
+
+  .transaction-table-wrapper {
+      max-height: 200px;
+  }
+
+  .transaction-table th,
+  .transaction-table td {
+      font-size: 1rem;
+      padding: 6px;
+  }
+
+  .dashboard .dashboardbot {
+      overflow-x: auto;
+  }
+}
